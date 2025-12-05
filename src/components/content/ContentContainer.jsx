@@ -219,11 +219,11 @@ export default function ContentContainer({ categoryId, moduleId, titleCategory, 
     const theme = getContentStyles(effective);
 
     return (
-        <div className={theme.container} style={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
+        <div className={theme.container} style={{ display: 'flex', flexDirection: 'column', flex: '1 1 auto', minHeight: 0, overflow: 'hidden' }}>
             {/* Main area: left list (with its own header + scroll), right panel sticky */}
-            <div className="flex flex-col md:flex-row gap-6" style={{ flex: '1 1 auto', overflow: 'hidden' }}>
+            <div className="flex flex-col md:flex-row gap-6" style={{ flex: '1 1 auto', overflow: 'hidden', minHeight: 0 }}>
                 {/* Left: content tree (shrink) */}
-                <div className="flex-1 md:max-w-xl lg:max-w-2xl flex flex-col" style={{ overflow: 'hidden' }}>
+                <div className="flex-1 md:max-w-xl lg:max-w-2xl flex flex-col" style={{ overflow: 'hidden', minHeight: 0 }}>
                     {/* Category header inside left column - fixed */}
                     <div style={{ flex: '0 0 auto', paddingBottom: 8 }}>
                         <div className={theme.title} style={{ margin: 0, paddingTop: 4 }}>{titleCategory}</div>
