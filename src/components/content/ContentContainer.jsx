@@ -263,7 +263,7 @@ export default function ContentContainer({ categoryId, moduleId, titleCategory, 
                 </div>
 
                 {/* Right: form panel */}
-                <aside className="w-full md:w-1/3 lg:w-1/2">
+                <aside className="flex-1 md:max-w-xl lg:max-w-2xl flex flex-col">
                     <div className={theme.panel} style={{ position: 'sticky', top: 24, height: 'calc(100vh - 120px)', overflowY: 'auto' }}>
                         {!isReadOnly && (
                             showCreate ? (
